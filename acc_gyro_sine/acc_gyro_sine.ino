@@ -1,5 +1,5 @@
 #include <avr/pgmspace.h>
-#include <TimerOne.h>
+// #include <TimerOne.h>
 #include <Wire.h>
 #include <Encoder.h>
 
@@ -13,7 +13,7 @@ byte err;
 
 // Encoder pins.  Need to have interrupts on the pins, and on
 // this Arduino, that's only 2 and 3
-Encoder encoder(2, 3);
+//Encoder encoder(2, 3);
 long encpos;
 
 // table of values of a sine wave
@@ -66,14 +66,20 @@ void setup()
   Wire.write(B00000000);    // 250 deg/s full scale range
   Wire.endTransmission();
    
-
   Wire.beginTransmission(MPUaddress);
   Wire.write(0x1C);    // Accel config
   Wire.write(B00010000);    // turn off accel self test 8g range
   Wire.endTransmission();
   
-  Timer1.initialize(1000);
-  Timer1.attachInterrupt(doStep);
+  pinMode(motorStepPin, OUTPUT);
+  pinMode(motorDirPin, OUTPUT);
+  pinMode(motorEnablePin, OUTPUT);
+  digitalWrite(motorEnablePin, HIGH);
+
+  //Timer1.initialize(1000);
+  //Timer1.attachInterrupt(doStep);
+  
+  Serial.println("finished setup");
 }
 
 void selftest()
@@ -220,6 +226,7 @@ void loop()
   ready = bitRead(stat,0);
   
   if (ready) {
+    //Serial.println("ready");
     Wire.beginTransmission(MPUaddress);
     Wire.write(0x43);        // gyro address
     err += Wire.endTransmission();
@@ -251,7 +258,9 @@ void loop()
   
   if (Serial.available() > 0) {
     cmd = Serial.read();
-
+    Serial.print("Read serial command: ");
+    Serial.println(cmd);
+    
     if (cmd == 's') {
       selftest();
     }
@@ -264,22 +273,26 @@ void loop()
   
       mindelay = 1000000/sinefreq/(65536/d);
 
+      Serial.println("Got freq command");
+      
       if ((mindelay <= 10) && (4*sinestep > 256)) {
         //Serial.println("Error: movement too fast");
         sinefreq = 0;
       }
       else {
-        Timer1.setPeriod(mindelay);
+        // Timer1.setPeriod(mindelay);
       }
     }      
     else {
+      Serial.println("Got read command");
+
       nbytes = 0;
-      encpos = encoder.read();
+      //encpos = encoder.read();
 
       nbytes += Serial.write(42);
       nbytes += Serial.write(gyro_data, 6);
       nbytes += Serial.write(accel_data, 6);
-      Serial.write((const uint8_t *)&encpos,4);
+      //Serial.write((const uint8_t *)&encpos,4);
       nbytes += Serial.write(42);
     }
   }
@@ -292,6 +305,8 @@ void doStep()
   int mid;
   int ab;
   long newpos;
+  
+  Serial.println("doStep");
   
   if (sinefreq > 0) {
     //ind = count >> 8;

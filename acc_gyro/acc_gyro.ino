@@ -39,8 +39,11 @@ void setup()
 
   Wire.beginTransmission(MPUaddress);
   Wire.write(0x1C);    // Accel config
-  Wire.write(B00010000);    // turn off accel self test 8g range
-  Wire.endTransmission();
+  Wire.write(B00000000);    // turn off accel self test 2g range
+  err = Wire.endTransmission();
+  
+  Serial.print("First: ");
+  Serial.println(err);
 }
 
 void selftest()
@@ -188,17 +191,17 @@ void loop()
   if (ready) {
     Wire.beginTransmission(MPUaddress);
     Wire.write(0x43);        // gyro address
-    err += Wire.endTransmission();
+    Wire.endTransmission();
 
     Wire.requestFrom(MPUaddress, 6);    // request 6 bytes
     for (n=0;n<6;n++) {
       gyro_data[n] = Wire.read(); // receive a byte 
     }
-    err += Wire.endTransmission();
+    Wire.endTransmission();
 
     Wire.beginTransmission(MPUaddress);
     Wire.write(0x3B);        // accel address
-    err += Wire.endTransmission();
+    Wire.endTransmission();
 
     Wire.requestFrom(MPUaddress, 6);    // request 6 bytes
     for (n=0;n<6;n++) {
@@ -206,16 +209,14 @@ void loop()
     }
   
     err += Wire.endTransmission();
-    //if (err > 0) {
-     // Serial.print("Errors: ");
-      //Serial.println(err);
-    //}
-    //else {
-    //  Serial.println("data");  
-    //}
+    if (err > 0) {
+      Serial.print("Errors: ");
+      Serial.println(err);
+    }
   }
   
   if (Serial.available() > 0) {
+    Serial.println("here");
     cmd = Serial.read();
 
     if (cmd == 's') {
@@ -228,6 +229,9 @@ void loop()
       nbytes += Serial.write(accel_data, 6);
       nbytes += Serial.write(42);
     }
+  }
+  else {
+    delay(100);
   }
 }
     

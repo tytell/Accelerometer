@@ -45,7 +45,7 @@ void setup()
 
   Wire.beginTransmission(MPUaddress);
   Wire.write(0x1C);    // Accel config
-  Wire.write(B00010000);    // turn off accel self test 8g range
+  Wire.write(B00000000);    // turn off accel self test 2g range
   Wire.endTransmission();
 }
 

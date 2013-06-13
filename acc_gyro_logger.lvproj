@@ -38,9 +38,11 @@
 		<Item Name="Open Accelerometer.vi" Type="VI" URL="../Open Accelerometer.vi"/>
 		<Item Name="Read Accelerometer.vi" Type="VI" URL="../Read Accelerometer.vi"/>
 		<Item Name="Save Accelerometer Data.vi" Type="VI" URL="../Save Accelerometer Data.vi"/>
+		<Item Name="Set Accel Time.vi" Type="VI" URL="../Set Accel Time.vi"/>
 		<Item Name="setup file.vi" Type="VI" URL="../setup file.vi"/>
 		<Item Name="test jitter.vi" Type="VI" URL="../test jitter.vi"/>
 		<Item Name="time jitter.vi" Type="VI" URL="../time jitter.vi"/>
+		<Item Name="Zero Accelerometer.vi" Type="VI" URL="../Zero Accelerometer.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>

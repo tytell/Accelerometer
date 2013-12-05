@@ -31,6 +31,7 @@
 		</Item>
 		<Item Name="Accelerometer Data to Waveform.vi" Type="VI" URL="../Accelerometer Data to Waveform.vi"/>
 		<Item Name="Accelerometer Data.ctl" Type="VI" URL="../Accelerometer Data.ctl"/>
+		<Item Name="Accelerometer Logger SPI.vi" Type="VI" URL="../Accelerometer Logger SPI.vi"/>
 		<Item Name="Accelerometer Logger.vi" Type="VI" URL="../Accelerometer Logger.vi"/>
 		<Item Name="Accelerometer.ctl" Type="VI" URL="../Accelerometer.ctl"/>
 		<Item Name="AccelerometerSPI.ctl" Type="VI" URL="../AccelerometerSPI.ctl"/>
@@ -39,6 +40,8 @@
 		<Item Name="Configure Accelerometer SPI.vi" Type="VI" URL="../Configure Accelerometer SPI.vi"/>
 		<Item Name="Configure Accelerometer.vi" Type="VI" URL="../Configure Accelerometer.vi"/>
 		<Item Name="continue file.vi" Type="VI" URL="../continue file.vi"/>
+		<Item Name="h5logger.lvlib" Type="Library" URL="../../h5logger/h5logger.lvlib"/>
+		<Item Name="H5refs.ctl" Type="VI" URL="../H5refs.ctl"/>
 		<Item Name="increment file name.vi" Type="VI" URL="../increment file name.vi"/>
 		<Item Name="Open Accelerometer SPI.vi" Type="VI" URL="../Open Accelerometer SPI.vi"/>
 		<Item Name="Open Accelerometer.vi" Type="VI" URL="../Open Accelerometer.vi"/>
@@ -47,6 +50,8 @@
 		<Item Name="Save Accelerometer Data.vi" Type="VI" URL="../Save Accelerometer Data.vi"/>
 		<Item Name="Set Accel Time.vi" Type="VI" URL="../Set Accel Time.vi"/>
 		<Item Name="setup file.vi" Type="VI" URL="../setup file.vi"/>
+		<Item Name="Setup H5 File.vi" Type="VI" URL="../Setup H5 File.vi"/>
+		<Item Name="SPI basic read write test.vi" Type="VI" URL="../SPI basic read write test.vi"/>
 		<Item Name="SPI read.vi" Type="VI" URL="../SPI read.vi"/>
 		<Item Name="test jitter.vi" Type="VI" URL="../test jitter.vi"/>
 		<Item Name="Test read SPI.vi" Type="VI" URL="../Test read SPI.vi"/>
@@ -68,6 +73,16 @@
 				<Item Name="Get Type of Variant.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/GetType.llb/Get Type of Variant.vi"/>
 				<Item Name="getChannelList.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/getChannelList.vi"/>
 				<Item Name="getNamesFromPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/getNamesFromPath.vi"/>
+				<Item Name="H5D.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/dataset/H5D.lvlib"/>
+				<Item Name="H5Equery.vi" Type="VI" URL="/&lt;vilib&gt;/addons/h5labview2/base/H5Equery.vi"/>
+				<Item Name="H5F.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/file/H5F.lvlib"/>
+				<Item Name="H5G.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/group/H5G.lvlib"/>
+				<Item Name="h5labview.lib" Type="Document" URL="/&lt;vilib&gt;/addons/h5labview2/h5labview.lib"/>
+				<Item Name="H5Lexists.vi" Type="VI" URL="/&lt;vilib&gt;/addons/h5labview2/base/H5Lexists.vi"/>
+				<Item Name="H5P.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/props/H5P.lvlib"/>
+				<Item Name="H5S.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/space/H5S.lvlib"/>
+				<Item Name="H5T.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/h5labview2/type/H5T.lvlib"/>
+				<Item Name="hid_t.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/h5labview2/base/hid_t.ctl"/>
 				<Item Name="initFileContentsTree.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/initFileContentsTree.vi"/>
 				<Item Name="initHelpButtonVisibility.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/initHelpButtonVisibility.vi"/>
 				<Item Name="initTabValues.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/initTabValues.vi"/>
@@ -104,6 +119,7 @@
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="panelResize.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/panelResize.vi"/>
+				<Item Name="rel_path.vi" Type="VI" URL="/&lt;vilib&gt;/addons/h5labview2/base/rel_path.vi"/>
 				<Item Name="setListBoxColumnWidths.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/setListBoxColumnWidths.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="status.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/status.vi"/>

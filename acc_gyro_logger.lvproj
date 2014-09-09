@@ -47,19 +47,29 @@
 			<Item Name="TestI2C.vi" Type="VI" URL="../I2C/TestI2C.vi"/>
 			<Item Name="View TDMS File.vi" Type="VI" URL="../I2C/View TDMS File.vi"/>
 		</Item>
+		<Item Name="Accel self test.vi" Type="VI" URL="../Accel self test.vi"/>
+		<Item Name="Accelerometer Data Block.ctl" Type="VI" URL="../I2C/Accelerometer Data Block.ctl"/>
 		<Item Name="Accelerometer Logger SPI.vi" Type="VI" URL="../Accelerometer Logger SPI.vi"/>
 		<Item Name="AccelerometerSPI.ctl" Type="VI" URL="../AccelerometerSPI.ctl"/>
+		<Item Name="Accumulate data.vi" Type="VI" URL="../Accumulate data.vi"/>
 		<Item Name="Close Accelerometer SPI.vi" Type="VI" URL="../Close Accelerometer SPI.vi"/>
 		<Item Name="Close H5 file.vi" Type="VI" URL="../Close H5 file.vi"/>
 		<Item Name="Configure Accelerometer SPI.vi" Type="VI" URL="../Configure Accelerometer SPI.vi"/>
-		<Item Name="h5logger.lvlib" Type="Library" URL="../../h5logger/h5logger.lvlib"/>
+		<Item Name="Configure magnetometer.vi" Type="VI" URL="../Configure magnetometer.vi"/>
+		<Item Name="Get factory trim-9250.vi" Type="VI" URL="../Get factory trim-9250.vi"/>
+		<Item Name="Get factory trim.vi" Type="VI" URL="../Get factory trim.vi"/>
+		<Item Name="Gyro self test.vi" Type="VI" URL="../Gyro self test.vi"/>
+		<Item Name="h5logger.lvlib" Type="Library" URL="../h5logger/h5logger.lvlib"/>
 		<Item Name="H5refs.ctl" Type="VI" URL="../H5refs.ctl"/>
 		<Item Name="Open Accelerometer SPI.vi" Type="VI" URL="../Open Accelerometer SPI.vi"/>
 		<Item Name="Read Accelerometer SPI.vi" Type="VI" URL="../Read Accelerometer SPI.vi"/>
 		<Item Name="Save Accelerometer Data SPI.vi" Type="VI" URL="../Save Accelerometer Data SPI.vi"/>
+		<Item Name="Self test.vi" Type="VI" URL="../Self test.vi"/>
 		<Item Name="Setup H5 File.vi" Type="VI" URL="../Setup H5 File.vi"/>
 		<Item Name="SPI basic read write test.vi" Type="VI" URL="../SPI basic read write test.vi"/>
+		<Item Name="SPI read words.vi" Type="VI" URL="../SPI read words.vi"/>
 		<Item Name="SPI read.vi" Type="VI" URL="../SPI read.vi"/>
+		<Item Name="SPI write many.vi" Type="VI" URL="../SPI write many.vi"/>
 		<Item Name="Stop after trigger.vi" Type="VI" URL="../Stop after trigger.vi"/>
 		<Item Name="Test read SPI.vi" Type="VI" URL="../Test read SPI.vi"/>
 		<Item Name="TestHDF5.vi" Type="VI" URL="../TestHDF5.vi"/>
@@ -177,15 +187,17 @@
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="9250registers.ctl" Type="VI" URL="../9250registers.ctl"/>
 			<Item Name="acc_gyro_enc_data.ctl" Type="VI" URL="../I2C/acc_gyro_enc_data.ctl"/>
 			<Item Name="acc_gyro_sync_data.ctl" Type="VI" URL="../I2C/acc_gyro_sync_data.ctl"/>
+			<Item Name="Configure MPU.vi" Type="VI" URL="../Configure MPU.vi"/>
 			<Item Name="data to acc_gyro_enc.vi" Type="VI" URL="../I2C/data to acc_gyro_enc.vi"/>
 			<Item Name="data to acc_gyro_sync.vi" Type="VI" URL="../I2C/data to acc_gyro_sync.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="ni845x.dll" Type="Document" URL="ni845x.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="XDNodeRunTimeDep.lvlib" Type="Library" URL="/&lt;vilib&gt;/Platform/TimedLoop/XDataNode/XDNodeRunTimeDep.lvlib"/>
+			<Item Name="SPI read many.vi" Type="VI" URL="../SPI read many.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
